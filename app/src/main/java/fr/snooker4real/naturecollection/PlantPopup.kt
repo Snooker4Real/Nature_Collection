@@ -43,9 +43,7 @@ class PlantPopup(
             val repo = PlantRepository()
             repo.updatePlant(currentPlant)
             updateStar(starButton)
-
         }
-
     }
 
     private fun setupDeleteButton() {

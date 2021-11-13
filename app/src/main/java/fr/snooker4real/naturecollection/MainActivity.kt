@@ -2,6 +2,7 @@ package fr.snooker4real.naturecollection
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import fr.snooker4real.naturecollection.fragments.CollectionFragment
 import fr.snooker4real.naturecollection.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         repo.updateData {
             // Injecter le fragment dans notre boite (fragment container)
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, HomeFragment(this))
+            transaction.replace(R.id.fragment_container, CollectionFragment(this))
             transaction.addToBackStack(null)
             transaction.commit()
         }
