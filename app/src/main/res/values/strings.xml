@@ -14,7 +14,7 @@
     <string name="add_plant_page_name_input">@string/item_plant_name</string>
     <string name="add_plant_page_description_input">@string/item_plant_description</string>
 
-    <string-array name="add_plant_page_grow_spinner_inpuit">
+    <string-array name="add_plant_page_grow_spinner_input">
         <item>Croissance : Lente</item>
         <item>Croissance : Moyenne</item>
         <item>Croissance : Rapide</item>
