@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import fr.snooker4real.naturecollection.MainActivity
 import fr.snooker4real.naturecollection.PlantModel
+import fr.snooker4real.naturecollection.PlantRepository
 import fr.snooker4real.naturecollection.R
 
 class PlantAdapter(
@@ -35,7 +36,10 @@ class PlantAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // récuperer les informations de la plante
-        val currentPlant = plantList[position]
+        val currentPlant = plantList[position];
+
+        // récupérer le repository
+        val repo = PlantRepository()
 
         // utiliser glide pour récupérer l'image à partir de son lien -> composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
@@ -51,6 +55,14 @@ class PlantAdapter(
             holder.starIcon.setImageResource(R.drawable.ic_star)
         } else {
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
+        }
+
+        // rajouter une intéraction sur cette étoile
+        holder.starIcon.setOnClickListener{
+            // inverser si le bouton est liked ou non
+            currentPlant.liked = !currentPlant.liked
+            //metre à jour l'objet plante
+            repo.updatePlant(currentPlant)
         }
 
     }
