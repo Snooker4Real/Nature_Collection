@@ -8,13 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import fr.snooker4real.naturecollection.MainActivity
-import fr.snooker4real.naturecollection.PlantModel
-import fr.snooker4real.naturecollection.PlantRepository
-import fr.snooker4real.naturecollection.R
+import fr.snooker4real.naturecollection.*
 
 class PlantAdapter(
-    private val context: MainActivity,
+    val context: MainActivity,
     private val plantList: List<PlantModel>,
     private val layoutId: Int
 ) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
@@ -64,7 +61,11 @@ class PlantAdapter(
             //metre à jour l'objet plante
             repo.updatePlant(currentPlant)
         }
-
+        // interaction lors du click sur une plante
+        holder.itemView.setOnClickListener{
+            // afficher la popup
+            PlantPopup(this, currentPlant).show()
+        }
     }
 
     override fun getItemCount(): Int = plantList.size
