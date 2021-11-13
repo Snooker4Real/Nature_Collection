@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "403785661014",
+    "firebase_url": "https://naturecollection-77799-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "naturecollection-77799",
+    "storage_bucket": "naturecollection-77799.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403785661014:android:429dd06162c524439f99f7",
+        "android_client_info": {
+          "package_name": "fr.snooker4real.naturecollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403785661014-gjnhu4ebjb6vku9gcu9mqjb29r3jr8ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5xekKvYh3qJ4EKXlyD8wF5tXAP2K7uAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403785661014-gjnhu4ebjb6vku9gcu9mqjb29r3jr8ev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
