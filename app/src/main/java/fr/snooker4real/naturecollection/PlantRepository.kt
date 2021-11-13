@@ -26,7 +26,6 @@ class PlantRepository {
                 for (ds in snapshot.children) {
                     //Construire un objet plante
                     val plant = ds.getValue(PlantModel::class.java)
-
                     // vérifier que la plante n'est pas nulle
                     if (plant != null) {
                         // ajouter la plante à notre liste
